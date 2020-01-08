@@ -3,10 +3,21 @@
 let botonOfuscar = document.querySelector("#botonOfuscar");
 
 botonOfuscar.addEventListener("click", () => {
+  ofuscar();
+});
+
+function ofuscar() {
   let urls = document.querySelector("#inputURLs");
-  let arregloURLS = urls.value.split(" ");
+  let arregloURLS;
   let nuevo = [];
   let divMostrar = document.querySelector(".resultado");
+
+  divMostrar.querySelectorAll("*").forEach(n => n.remove());
+  arregloURLS = urls.value.split("\n");
+
+  if (arregloURLS[arregloURLS.length - 1] == "") {
+    arregloURLS.pop();
+  }
 
   arregloURLS.forEach(e => {
     let resultado = e.split("/");
@@ -28,4 +39,4 @@ botonOfuscar.addEventListener("click", () => {
     parrafo.innerHTML = e;
     divMostrar.appendChild(parrafo);
   });
-});
+}
