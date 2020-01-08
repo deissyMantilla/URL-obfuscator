@@ -35,8 +35,9 @@ function ofuscar() {
   });
 
   union.forEach(e => {
-    let parrafo = document.createElement("p");
+    let parrafo = document.createElement("div");
     parrafo.innerHTML = e;
+    parrafo.className = "parrafo";
     divMostrar.appendChild(parrafo);
   });
 }
