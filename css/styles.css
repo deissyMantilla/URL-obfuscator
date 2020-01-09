@@ -46,10 +46,12 @@ body {
   width: 100px;
   height: 30px;
   border-radius: 20px;
-  align-self: flex-end;
-  margin-right: 200px;
   font-family: "Montserrat", sans-serif;
   font-size: 15px;
+}
+.boton1 {
+  align-self: flex-end;
+  margin-right: 200px;
 }
 .boton:hover {
   cursor: pointer;
@@ -62,4 +64,7 @@ body {
 }
 .parrafo {
   font-size: 15px;
+}
+.margin-sub {
+  margin-top: 30px;
 }

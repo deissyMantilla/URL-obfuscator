@@ -1,13 +1,16 @@
 "use strict";
 
 let botonOfuscar = document.querySelector("#botonOfuscar");
+let botonLimpiar = document.querySelector("#limpiar");
+let urls = document.querySelector("#inputURLs");
 
 botonOfuscar.addEventListener("click", () => {
   ofuscar();
 });
 
+botonLimpiar.addEventListener("click", () => (urls.value = ""));
+
 function ofuscar() {
-  let urls = document.querySelector("#inputURLs");
   let arregloURLS;
   let nuevo = [];
   let divMostrar = document.querySelector(".resultado");
