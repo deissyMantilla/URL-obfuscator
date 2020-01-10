@@ -18,9 +18,11 @@ function ofuscar() {
   divMostrar.querySelectorAll("*").forEach(n => n.remove());
   arregloURLS = urls.value.split("\n");
 
-  if (arregloURLS[arregloURLS.length - 1] == "") {
-    arregloURLS.pop();
-  }
+  arregloURLS.forEach((e, ubicacion) => {
+    if (e == "" || e == "null") {
+      arregloURLS.splice(ubicacion, 1);
+    }
+  });
 
   arregloURLS.forEach(e => {
     let resultado = e.split("/");
