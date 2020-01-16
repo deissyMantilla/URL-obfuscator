@@ -37,25 +37,4 @@ function ofuscar() {
     divMostrar.appendChild(parrafo);
     console.log(e);
   });
-  /* arregloURLS.forEach(e => {
-    let resultado = e.split("/");
-    nuevo.push(resultado);
-  });
-  nuevo.forEach(e => {
-    let cambio = e.splice(0, 1, "hxxp:");
-    let cambioPunto = e[2].split(".");
-    cambio = e.splice(2, 1, cambioPunto.join("[.]"));
-    return cambio;
-  });
-
-  let union = nuevo.map(e => {
-    return e.join("/");
-  });
- */
-  /*   union.forEach(e => {
-    let parrafo = document.createElement("div");
-    parrafo.innerHTML = e;
-    parrafo.className = "parrafo";
-    divMostrar.appendChild(parrafo);
-  }); */
 }
