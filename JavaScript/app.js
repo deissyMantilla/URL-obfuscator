@@ -35,6 +35,5 @@ function ofuscar() {
     parrafo.innerHTML = e;
     parrafo.className = "parrafo";
     divMostrar.appendChild(parrafo);
-    console.log(e);
   });
 }
