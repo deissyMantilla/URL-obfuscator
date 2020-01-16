@@ -24,7 +24,20 @@ function ofuscar() {
     }
   });
 
-  arregloURLS.forEach(e => {
+  nuevo = arregloURLS.map(e => {
+    let urlConCambioHxxp = e.replace("http", "hxxp");
+    let urlCambioPunto = urlConCambioHxxp.replace(/\./gi, "[.]");
+    return urlCambioPunto;
+  });
+
+  nuevo.forEach(e => {
+    let parrafo = document.createElement("div");
+    parrafo.innerHTML = e;
+    parrafo.className = "parrafo";
+    divMostrar.appendChild(parrafo);
+    console.log(e);
+  });
+  /* arregloURLS.forEach(e => {
     let resultado = e.split("/");
     nuevo.push(resultado);
   });
@@ -38,11 +51,11 @@ function ofuscar() {
   let union = nuevo.map(e => {
     return e.join("/");
   });
-
-  union.forEach(e => {
+ */
+  /*   union.forEach(e => {
     let parrafo = document.createElement("div");
     parrafo.innerHTML = e;
     parrafo.className = "parrafo";
     divMostrar.appendChild(parrafo);
-  });
+  }); */
 }
